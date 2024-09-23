@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MQ+OPuLu7clx8tAhiBCZkVALnBf1J1zt11CyAQlH47wlHp86Rj+p3LmN6mfu8tEAis7gUwJlWMinRYgdmTLB9Q==",
+  "success": true,
+  "projectFilePath": "/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/lab1.csproj",
+  "expectedPackageFiles": [
+    "/home/kitt/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.7/microsoft.aspnetcore.app.ref.8.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}

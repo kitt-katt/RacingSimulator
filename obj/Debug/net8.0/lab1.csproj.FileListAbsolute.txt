@@ -1,0 +1,14 @@
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/bin/Debug/net8.0/lab1
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/bin/Debug/net8.0/lab1.deps.json
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/bin/Debug/net8.0/lab1.runtimeconfig.json
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/bin/Debug/net8.0/lab1.dll
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/bin/Debug/net8.0/lab1.pdb
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/lab1.GeneratedMSBuildEditorConfig.editorconfig
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/lab1.AssemblyInfoInputs.cache
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/lab1.AssemblyInfo.cs
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/lab1.csproj.CoreCompileInputs.cache
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/lab1.dll
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/refint/lab1.dll
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/lab1.pdb
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/lab1.genruntimeconfig.cache
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/ref/lab1.dll
