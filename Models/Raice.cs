@@ -18,12 +18,15 @@ namespace RacingSimulator.Models
     {
         public double Distance { get; }
         public RaceType Type { get; }
+        public Weather Weather { get; }
+
         private List<Transport> _participants = new List<Transport>();
 
-        public Race(double distance, RaceType type)
+        public Race(double distance, RaceType type, Weather weather)
         {
             Distance = distance;
             Type = type;
+            Weather = weather;
         }
 
         public void RegisterTransport(Transport transport)
@@ -47,8 +50,8 @@ namespace RacingSimulator.Models
                 throw new InvalidOperationException("Невозможно начать гонку без участников.");
             }
 
-            return _participants.OrderBy(t => t.CalculateRaceTime(Distance)).First();
-        }
+            return _participants.OrderBy(t => t.CalculateRaceTime(Distance, Weather)).First();
+        } 
     }
 }
 

@@ -12,9 +12,11 @@ namespace RacingSimulator.Models
             AccelerationFactor = accelerationFactor;
         }
 
-        public override double CalculateRaceTime(double distance)
+        public override double CalculateRaceTime(double distance, Weather weather)
         {
-            return distance / (Speed * AccelerationFactor);
+            double adjustedSpeed = AdjustSpeedForWeather(weather);  // Учитываем погодные условия
+            // Используем модифицированную скорость с коэффициентом ускорения
+            return distance / (adjustedSpeed * AccelerationFactor);
         }
     }
 }

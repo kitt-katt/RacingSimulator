@@ -14,6 +14,12 @@ namespace RacingSimulator.Models
             Speed = speed;
         }
 
-        public abstract double CalculateRaceTime(double distance);
+        public abstract double CalculateRaceTime(double distance, Weather weather);
+
+        // Общая логика для модификации скорости под влиянием погоды
+        protected double AdjustSpeedForWeather(Weather weather)
+        {
+            return Speed * weather.GetSpeedModifier(this);
+        }
     }
 }

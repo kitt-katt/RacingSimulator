@@ -15,27 +15,28 @@ namespace RacingSimulator.Models
             RestDuration = restDuration;
         }
 
-        public override double CalculateRaceTime(double distance)
+        public override double CalculateRaceTime(double distance, Weather weather)
         {
             double time = 0;
             double coveredDistance = 0;
             int restCount = 0;
+            double adjustedSpeed = AdjustSpeedForWeather(weather);
 
             while (coveredDistance < distance)
             {
-                if (coveredDistance + Speed * TimeBeforeRest <= distance)
+                if (coveredDistance + adjustedSpeed * TimeBeforeRest <= distance)
                 {
-                    coveredDistance += Speed * TimeBeforeRest;
+                    coveredDistance += adjustedSpeed * TimeBeforeRest;
                     time += TimeBeforeRest;
-                    time += RestDuration * (1 + restCount); // увеличиваем время отдыха
+                    time += RestDuration * (1 + restCount); // увеличиваем время отдыха в зависимости от порядкового номера
                     restCount++;
                 }
                 else
                 {
-                    time += (distance - coveredDistance) / Speed;
+                    time += (distance - coveredDistance) / adjustedSpeed;
                     coveredDistance = distance;
                 }
-            }
+            } 
 
             return time;
         }

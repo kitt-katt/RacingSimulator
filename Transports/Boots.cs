@@ -8,10 +8,11 @@ namespace RacingSimulator.Transports
     {
         public Boots() : base("Сапоги-скороходы", 15, 6, 1) { }
 
-        public override double CalculateRaceTime(double distance)
+        public override double CalculateRaceTime(double distance, Weather weather)
         {
-            // Экспоненциальное снижение времени на гонку
-            return Math.Exp(distance / Speed) / 10;
+            // Экспоненциальное снижение времени на гонку c учетом погоды
+            double adjustedSpeed = AdjustSpeedForWeather(weather);
+            return Math.Exp(distance / Speed) / 10 * adjustedSpeed;
         }
     }
 }

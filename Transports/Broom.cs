@@ -8,10 +8,10 @@ namespace RacingSimulator.Transports
     {
         public Broom() : base("Метла", 20, 1.1) { }
 
-        public override double CalculateRaceTime(double distance)
+        public override double CalculateRaceTime(double distance, Weather weather)
         {
-            // Линейное увеличение скорости
-            return distance / (Speed * AccelerationFactor);
+            double adjustedSpeed = AdjustSpeedForWeather(weather);
+            return distance / (adjustedSpeed * AccelerationFactor);
         }
     }
 }

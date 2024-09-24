@@ -8,11 +8,11 @@ namespace RacingSimulator.Transports
     public class BabaYaga : GroundTransport
     {
         public BabaYaga() : base("Ступа Бабы Яги", 10, 5, 2) { }
-        
-        public override double CalculateRaceTime(double distance)
+
+        public override double CalculateRaceTime(double distance, Weather weather)
         {
-            // Константное время на гонку
-            return distance / Speed;
+            double adjustedSpeed = AdjustSpeedForWeather(weather);  // Модифицируем скорость с учетом погоды
+            return distance / adjustedSpeed;
         }
     }
 }

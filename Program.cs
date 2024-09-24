@@ -21,11 +21,23 @@
                 _ => throw new InvalidOperationException("Неверный тип гонки.")
             };
 
-
             Console.WriteLine("Введите дистанцию гонки (в условных единицах):");
             double distance = double.Parse(Console.ReadLine());
 
-            Race race = new Race(distance, raceType);   // создаем гонку с указанными парметрами
+            Console.WriteLine("Выберите погодные условия: 1 - Солнечно, 2 - Дождь, 3 - Ветрено, 4 - Туман");
+            int weatherInput = int.Parse(Console.ReadLine());
+            WeatherType weatherType = weatherInput switch
+            {
+                1 => WeatherType.Sunny,
+                2 => WeatherType.Rainy,
+                3 => WeatherType.Windy,
+                4 => WeatherType.Foggy,
+                _ => throw new InvalidOperationException("Неверный тип погоды.")
+            };
+
+            Weather weather = new Weather(weatherType);
+
+            Race race = new Race(distance, raceType, weather);
 
             List<Transport> availableTransports = new List<Transport>
             {
@@ -65,7 +77,7 @@
                 }
                 else
                 {
-                    Console.WriteLine($"{selectedIndex} - неверный номер транспортного средства!");
+                    Console.WriteLine("Неверный номер транспортного средства.");
                 }
             }
 
