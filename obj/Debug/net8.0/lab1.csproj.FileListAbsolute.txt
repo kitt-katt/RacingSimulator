@@ -12,3 +12,4 @@
 /home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/lab1.pdb
 /home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/lab1.genruntimeconfig.cache
 /home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/ref/lab1.dll
+/home/kitt/Учеба_ИТМО/Семестр 1/ООП/labs/RacingSimulator/obj/Debug/net8.0/lab1.sourcelink.json
