@@ -65,7 +65,7 @@
                 }
                 else
                 {
-                    Console.WriteLine($"{selectedIndex} - Неверный номер транспортного средства!");
+                    Console.WriteLine($"{selectedIndex} - неверный номер транспортного средства!");
                 }
             }
 
