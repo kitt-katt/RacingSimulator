@@ -4,41 +4,41 @@ namespace RacingSimulator.Models;
 
 
 public class Race
-{
-    public double Distance { get; }
-    public RaceType Type { get; }
-    public Weather Weather { get; }
-
-    private List<Transport> _participants = new List<Transport>();
-
-    public Race(double distance, RaceType type, Weather weather)
     {
-        Distance = distance;
-        Type = type;
-        Weather = weather;
-    }
+        public double Distance { get; }
+        public RaceType Type { get; }
+        public Weather Weather { get; }
 
-    public void RegisterTransport(Transport transport)
-    {
-        if ((Type == RaceType.Ground && transport is GroundTransport) ||
-            (Type == RaceType.Air && transport is AirTransport) ||
-            Type == RaceType.Mixed)
-        {
-            _participants.Add(transport);
-        }
-        else
-        {
-            throw new InvalidOperationException($"Транспорт {transport.Name} не может участвовать в гонке типа {Type}.");
-        }
-    }
+        private List<Transport> _participants = new List<Transport>();
 
-    public Transport StartRace()
-    {
-        if (_participants.Count == 0)
+        public Race(double distance, RaceType type, Weather weather)
         {
-            throw new InvalidOperationException("Невозможно начать гонку без участников.");
+            Distance = distance;
+            Type = type;
+            Weather = weather;
         }
 
-        return _participants.OrderBy(t => t.CalculateRaceTime(Distance, Weather)).First();
+        public void RegisterTransport(Transport transport)
+        {
+            if ((Type == RaceType.Ground && transport is GroundTransport) ||
+                (Type == RaceType.Air && transport is AirTransport) ||
+                Type == RaceType.Mixed)
+            {
+                _participants.Add(transport);
+            }
+            else
+            {
+                throw new InvalidOperationException($"Транспорт {transport.Name} не может участвовать в гонке типа {Type}.");
+            }
+        }
+
+        public int ParticipantsCount => _participants.Count;
+
+        public List<(Transport Transport, double Time)> GetRaceResults()
+        {
+            return _participants
+                .Select(t => (t, t.CalculateRaceTime(Distance, Weather)))
+                .OrderBy(result => result.Item2)  // Сортируем по времени
+                .ToList();
+        }
     }
-}
