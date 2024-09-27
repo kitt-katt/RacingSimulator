@@ -1,17 +1,17 @@
 // Метла
 
-namespace RacingSimulator.Transports
+namespace RacingSimulator.Transports;
+
+
+using RacingSimulator.Models;
+
+public class Broom : AirTransport
 {
-    using RacingSimulator.Models;
+    public Broom() : base("Метла", 20, 1.1) { }
 
-    public class Broom : AirTransport
+    public override double CalculateRaceTime(double distance, Weather weather)
     {
-        public Broom() : base("Метла", 20, 1.1) { }
-
-        public override double CalculateRaceTime(double distance, Weather weather)
-        {
-            double adjustedSpeed = AdjustSpeedForWeather(weather);
-            return distance / (adjustedSpeed * AccelerationFactor);
-        }
+        double adjustedSpeed = AdjustSpeedForWeather(weather);
+        return distance / (adjustedSpeed * AccelerationFactor);
     }
 }

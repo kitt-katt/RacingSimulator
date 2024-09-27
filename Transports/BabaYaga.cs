@@ -1,18 +1,18 @@
 // Ступа Бабы Яги
 
 
-namespace RacingSimulator.Transports
+namespace RacingSimulator.Transports;
+
+
+using RacingSimulator.Models;
+
+public class BabaYaga : GroundTransport
 {
-    using RacingSimulator.Models;
+    public BabaYaga() : base("Ступа Бабы Яги", 10, 5, 2) { }
 
-    public class BabaYaga : GroundTransport
+    public override double CalculateRaceTime(double distance, Weather weather)
     {
-        public BabaYaga() : base("Ступа Бабы Яги", 10, 5, 2) { }
-
-        public override double CalculateRaceTime(double distance, Weather weather)
-        {
-            double adjustedSpeed = AdjustSpeedForWeather(weather);  // Модифицируем скорость с учетом погоды
-            return distance / adjustedSpeed;
-        }
+        double adjustedSpeed = AdjustSpeedForWeather(weather);  // Модифицируем скорость с учетом погоды
+        return distance / adjustedSpeed;
     }
 }

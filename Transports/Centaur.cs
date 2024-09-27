@@ -1,11 +1,11 @@
 // Кентавр
 
-namespace RacingSimulator.Transports
-{
-    using RacingSimulator.Models;
+namespace RacingSimulator.Transports;
 
-    public class Centaur : GroundTransport
-    {
-        public Centaur() : base("Кентавр", 25, 4, 1) { }
-    }
+
+using RacingSimulator.Models;
+
+public class Centaur : GroundTransport
+{
+    public Centaur() : base("Кентавр", 25, 4, 1) { }
 }
